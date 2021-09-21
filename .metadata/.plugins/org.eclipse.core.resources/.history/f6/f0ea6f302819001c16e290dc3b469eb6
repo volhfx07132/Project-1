@@ -1,0 +1,31 @@
+package com.java.levo;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class EmailController extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	   req.getRequestDispatcher("login").forward(req, resp);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String action = req.getParameter("action");
+		ServletContext context = getServletContext();
+		if (action.equals("login")) {
+			String email = req.getParameter("email");
+			String password = req.getParameter("password");
+			if(email.equals(context.getAttribute("Email")) && password.equals(context.getAttribute("Password"))) {
+				
+			}
+		}
+	}
+}

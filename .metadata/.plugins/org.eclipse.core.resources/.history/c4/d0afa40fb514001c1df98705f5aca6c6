@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="Style/loginSuccess.css">
+</head>
+<body>
+     <div class="box_right">
+          <h2 class="text_tagh1">TEAM</h2>
+          <h2 class="text_tagA_staff"><a href="#">Staff</a> </h2><br>
+          <h2 class="text_tagA_class"><a href="#">Class</a></h2><br>
+     </div>
+     <div class="box_top">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">STUDENT FUNIX TRAINING PROJOECT</a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%= request.getAttribute("email") %></a></li>
+                <li><a href="controller?action=iphone"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+     </div>
+     <div class="box_middle">
+          <img class="box_img" src="https://image.freepik.com/free-vector/school-building-educational-institution-college_107791-1051.jpg" alt="">
+    </div>
+    <div class="box_bottom">
+        <div class="div_menber">
+            <h2>Member Of The Team</h2>
+        </div>
+        <textarea rows="16" cols="169"><%= request.getAttribute("value")%></textarea>
+    </div>
+        
+
+</body>
+</html>

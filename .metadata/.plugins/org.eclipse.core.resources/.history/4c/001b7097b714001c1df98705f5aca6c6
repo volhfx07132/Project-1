@@ -1,0 +1,110 @@
+@charset "ISO-8859-1";
+*{
+   margin: 0px;
+   padding: 0px;
+   font-family: sans-serif;
+}
+.hero {
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	background-image: url(Assest/banner.jpg);
+}
+
+.form-box {
+	width: 380px;
+	height: 400px;
+	position: relative;
+	border-radius: 60px;
+	margin: 6% auto;
+	background: rgb(214, 182, 243);
+	padding: 5px;
+}
+
+.button-box {
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px #ff61241f;
+	border-radius: 30px;
+}
+
+.button-toggle {
+	padding: 10px 30px;
+	cursor: pointer;
+	outline: none;
+    background : transparent;
+	border: 0px;
+	position: relative;
+	
+}
+
+.social-icons {
+	margin: 30px auto;
+	text-align: center;
+}
+
+.social-icons img {
+	width: 30px;
+	margin: 0 12px;
+	box-shadow: 0 0 20px 0;
+}
+
+#btn {
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border-radius: 30px;
+	transition: .5s;
+}
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width:100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom:1px solid #999; 
+    outline: none;
+    position: relative;
+    background: transparent;
+}
+.submit-btn{
+    width: 100%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border:0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin:  30ps 10px 30px 0px;
+}
+.div-checkbox{
+    margin: 20px 0px 20px 0px;
+    position: relative;
+}
+#login{
+
+   left:50px;
+}
+#register{
+   left:450px;
+}
+span{
+	font-size: 16px;
+}

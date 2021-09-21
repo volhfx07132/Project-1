@@ -1,0 +1,29 @@
+package com.tutorialspoint;
+
+public class User {
+    private String email;
+    private String passwprd;
+   
+    
+	public User(String email, String passwprd) {
+		this.email = email;
+		this.passwprd = passwprd;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPasswprd() {
+		return passwprd;
+	}
+	public void setPasswprd(String passwprd) {
+		this.passwprd = passwprd;
+	}
+    
+    
+    
+    
+}

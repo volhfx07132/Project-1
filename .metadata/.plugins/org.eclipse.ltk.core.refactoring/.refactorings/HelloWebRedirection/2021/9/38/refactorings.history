@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;HelloWebRedirection/src/main/webapp/WEB-INF/HelloWeb-servlet.jsp&apos; to &apos;HelloWeb-servlet.xml&apos;" description="Rename resource &apos;HelloWeb-servlet.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/HelloWeb-servlet.jsp" name="HelloWeb-servlet.xml" stamp="1631676253160" updateReferences="true"/>
+</session>

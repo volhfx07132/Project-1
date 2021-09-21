@@ -1,0 +1,6 @@
+package com.java.levo;
+
+public class HelloWorld {
+    private String message;
+    
+}

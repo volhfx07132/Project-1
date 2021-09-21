@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" href="Style/login.css"> 
+</head>
+<body>
+		<div class="hero">
+			<div id="div-form-box" class="form-box">
+				<div class="button-box">
+					<div id="btn"></div>
+					<button type="button" class="button-toggle" onclick="login()">Login</button>
+					<button type="button" class="button-toggle" onclick="register()">Register</button>
+				</div>
+				<div class="social-icons">
+					<img alt="fb" src="Assest/fb.png"> <img alt="gp"
+						src="Assest/gp.png"> <img alt="tw" src="Assest/tw.png">
+				</div>
+				<form id="login" class="input-group" action="main" method="get">
+					<input type="text" class="input-field" placeholder="User Name"
+						required="required" name="userName"> <input type="password"
+						class="input-field" placeholder="Password" required="required" name="password">
+					<div class="div-checkbox">
+					    <input type="checkbox" class="check-box"> 
+					     <span>Remenber Me &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>Forgot <a href="">Password?</a></span>
+					</div>
+				    <input type="submit" class="submit-btn" value="Login">		
+				</form>
+				<form id="register" class="input-group" action="main" method="get">
+					<input type="text" class="input-field" placeholder="User Name"
+						required="required" name="userNameRegister"> <input type="password"
+						class="input-field" placeholder="Password" required="required">
+					<input type="password" class="input-field" placeholder="Password"
+						required="required" name="passwordRegister"><input type="email"
+						class="input-field" placeholder="Email" required="required">	
+					<div class="div-checkbox">
+					    <input type="checkbox" class="check-box"> 
+					     <span>Assess to my system & condition</span>
+					</div>
+				    <input type="submit" class="submit-btn" value="Register">		
+				</form>
+			</div>
+		</div>
+</body>
+<script>  
+         var x = document.getElementById("login");
+         var y = document.getElementById("register");
+         var z = document.getElementById("btn");
+		 var t = document.getElementById("div-form-box");
+         function register(){
+			console.log("register");
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+			t.style.height = "500px";
+			t.style.backgroundColor ="rgb(199, 245, 229)";
+         }
+		 function login(){
+			console.log("login");
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0";
+			t.style.height = "400px";
+			t.style.backgroundColor =  "rgb(214, 182, 243)";
+         }
+</script>
+</html>

@@ -1,0 +1,32 @@
+package com.java.levo;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import com.mysql.cj.protocol.Resultset;
+
+public class Account {
+	private Connection connection;
+
+	public Account(Connection connectionl) {
+		super();
+		this.connection = connection;
+	}
+	
+	public String showNamePhone() throws SQLException {
+		String sqlString = "SELECT * FROM shopingphone.products";
+		PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+		ResultSet resultSet = preparedStatement.executeQuery();
+		String valueString = "";
+		if(resultSet.next()) {
+			valueString += resultSet.getString(1) +"\n";
+		}
+		resultSet.close();
+		return valueString;
+	}
+
+}

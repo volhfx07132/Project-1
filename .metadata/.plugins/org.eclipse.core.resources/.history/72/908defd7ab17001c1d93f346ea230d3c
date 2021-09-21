@@ -1,0 +1,66 @@
+package com.java.levo;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import com.mysql.cj.protocol.Resultset;
+
+
+
+
+public class Account {
+    private Connection connection;
+    
+    public Account(Connection connection) {
+    	this.connection = connection;
+    }
+    
+    public String getNameAccount() throws SQLException {
+    	String sql = "SELECT * FROM shopingphone.account";
+    	PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        ResultSet resultset = preparedStatement.executeQuery();
+        String value = "";
+    	while(resultset.next()) {
+    		value += resultset.getString(1)+"\n";
+    	}
+    	return value;
+    }
+    
+    public boolean loginDataBase(String email, String password) throws SQLException {
+    	String sql = "SELECT COUNT(*) as count FROM shopingphone.account where user_email = ? and password = ?";
+    	PreparedStatement preparedStatement = connection.prepareStatement(sql);
+    	preparedStatement.setString(1, email);
+    	preparedStatement.setString(2, password);
+    	ResultSet resultSet = preparedStatement.executeQuery();  
+        int count = 0;
+        if(resultSet.next()) {
+        	count = resultSet.getInt("count");
+        }
+        if(count == 0) {
+        	return false;
+        }else {
+        	return true;
+        }
+    }
+    
+    public boolean checkAccount(String email) throws SQLException {
+    	String sql = "SELECT COUNT(*) as count FROM shopingphone.account where user_email = ?";
+    	PreparedStatement preparedStatement = connection.prepareStatement(sql);
+    	preparedStatement.setString(1,email);
+    	ResultSet resultSet = preparedStatement.executeQuery();
+    	int count = 0;
+    	if(resultSet.next()) {
+    		count = resultSet.getInt("count");
+    	}
+    	if(count == 0) {
+    		return false;
+    	}else {
+    		return true;
+    	}
+    }
+    
+}

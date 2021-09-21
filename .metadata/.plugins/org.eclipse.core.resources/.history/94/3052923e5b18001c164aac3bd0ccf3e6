@@ -1,0 +1,14 @@
+package com.java.levo;
+
+import javax.mail.MessagingException;
+
+public class Demo {
+   public static void main(String[] args) {
+	    try {
+	    	DemoSendMail.sendMail("lehongvi19x@gmail.com");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+   }
+}

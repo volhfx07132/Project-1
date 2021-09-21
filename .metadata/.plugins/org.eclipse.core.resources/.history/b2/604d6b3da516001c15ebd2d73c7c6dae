@@ -1,0 +1,39 @@
+package com.java.levo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.tutorialspoint.Student;
+
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+
+@Controller
+public class StudentController {
+   @RequestMapping(value = "/", method = RequestMethod.GET)
+   public String student(Model model) {
+	    model.addAttribute("command", new Student()); 
+	    return "login";
+  }
+   @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
+      public String addStudent(@ModelAttribute("StudentLogin")Student student, ModelMap model) {
+	  if(student.getEmail() == null || student.getPassword() ==null || student.getRepeat_password() == null) {
+		  model.addAttribute("email", student.getEmail());
+	       model.addAttribute("password", student.getPassword());
+	       model.addAttribute("repeat_password", student.getRepeat_password());
+	       model.addAttribute("command", new Student()); 
+		    model.addAttribute("message", "Login fail");
+		    return "login";
+	  }else {
+		  model.addAttribute("email", student.getEmail());
+	       model.addAttribute("password", student.getPassword());
+	       model.addAttribute("repeat_password", student.getRepeat_password());
+	       model.addAttribute("command", new Student()); 
+		    model.addAttribute("message", "Login success");
+		    return "result";
+	  }
+   }
+}

@@ -1,0 +1,392 @@
+@charset "ISO-8859-1";
+
+table, tr {
+	margin-bottom: 10px;
+}
+
+td {
+	width: 320px;
+	height: 350px;
+	border: 0.5px solid black;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.box_phone_title {
+	margin: auto;
+}
+
+.box_information {
+	margin-left: 13px;
+}
+
+.hot_sale {
+	float: left;
+	position: relative;
+}
+
+.image_phone {
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+
+.button_sale {
+	width: 60px;
+	height: 50px;
+	position: relative;
+	background: linear-gradient(to right, blue, #ffad06);
+	top: -75px;
+	color: white;
+	font-size: 20px;
+	border-radius: 50%;
+}
+
+.name_phone {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.price_phone {
+	font-size: 23px;
+	color: red;
+	font-weight: bold;
+}
+
+.star {
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+
+.text_reviewer {
+	font-weight: bold;
+	float: left;
+	position: relative;
+	top: 0px;
+}
+
+.box_hotSale {
+	height: 320px;
+	text-align: center;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	margin-bottom: 20px;
+	margin-top: -20px;
+}
+
+.tr_hotSale {
+	width: 660px;
+	height: 143px;
+	border: 0px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.image_hotSale {
+	width: 647px;
+	margin-top: 10px;
+	height: 143px;
+	border-radius: 20px;
+}
+
+.logo_image {
+	width: 50px;
+	height: 50px;
+}
+
+.button_brand {
+	height: 50px;
+	border-radius: 10px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.td_brand {
+	height: 50px;
+	width: 200px;
+	margin: 10px;
+	border: 0px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.input_brand {
+	height: 60px;
+	width: 180px;
+	border: 3px solid green;
+	border-radius: 20px;
+}
+
+.footer {
+	width: 100%;
+	border: 1px solid black;
+	position: relative;
+	background-color: rgb(196, 192, 192);
+	height: 230px;
+	margin: auto;
+}
+
+.div-image-address {
+	text-align: center;
+}
+
+.text-infor {
+	font-size: 20px;
+	color: red;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
+	text-decoration: underline;
+	text-decoration-color: aqua;
+}
+
+.div-image-cart {
+	background-color: rgb(196, 192, 192);
+	width: 100%;
+	height: 40px;
+	margin: 5px 0px 5px 0px;
+	text-align: center;
+}
+
+.creveaInfor {
+	width: 250px;
+	position: relative;
+	margin: -30px 60px 10px 10px;
+	top: -20px;
+}
+
+#inputYourEmail {
+	margin-bottom: 10px;
+	width: 270px;
+}
+
+#idCategory {
+	margin-left: 25px;
+}
+
+#idLanguage {
+	margin-top: 45px;
+}
+
+.div-shose {
+	width: 100px;
+	height: 80px;
+	margin: 0px 10px 0px 10px;
+	border: 2px solid blue;
+}
+
+.text-infor-trend {
+	font-size: 30px;
+	color: rgb(4, 0, 255);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
+	text-decoration: underline;
+	text-align: center;
+	text-decoration-color: rgb(255, 0, 0);
+}
+
+.text-shose {
+	width: 150px;
+	height: 30px;
+	text-align: center;
+	margin: 0px 100px 0px 10px;
+}
+
+.text-top {
+	text-align: center;
+	font-size: 20px;
+	color: rgb(4, 0, 255);
+}
+
+.link-address {
+	width: 100px;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 15px;
+	color: black;
+}
+
+.div-shose-tredning {
+	width: 128px;
+	height: 100px;
+	text-decoration: un;
+	margin: 0px 10px 0px 10px;
+	border: 2px solid rgb(0, 0, 0);
+}
+
+#text-producter {
+	width: 300px;
+}
+
+.box_underline {
+	width: 100%;
+	height: 20px;
+	position: relative;
+	text-align:center;
+	color:black;
+	font-weight:bold;
+	top: -10px;
+	background-color: rgb(196, 192, 192);
+	border: 1px solid black;
+}
+.img_dataBasesX{
+	width: 200px;
+	height: 200px;
+}
+#search_by{
+  background: white;
+  color:black;	
+}
+.box_product_phone{
+	width: 98%;
+	height: 450px;
+	margin-bottom: 20px;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+.box_phone_image{
+	width: 40%;
+	height: 100%;
+}
+.box_phone_img{
+	width:100%;
+	height: 100%;
+}
+.box_phone_informtion{
+	width: 57%;
+	height: 100%;
+	position: relative;
+	top:-450px;
+	border-right:15px;
+	left: 520px;
+}
+.box_div_name{
+	 margin: 0px 10px 10px 10px;
+	width: 200px;
+	text-align:left;
+	height: 50px;
+	border:1px solid white;
+	color: red;
+}
+.box_div_value{
+	 margin: 0px 10px 10px 10px;
+	width: 500px;
+	text-align:left;
+	height: 50px;
+	position: relative;
+	top:-240px;
+	left: 220px;
+	border:1px solid white;
+}
+#box_div_value_infor{
+	 margin: 0px 10px 10px 10px;
+	width: 500px;
+	height: 140px;
+	position: relative;
+	top:-240px;
+	left: 220px;
+	text-align:left;
+	border:1px solid white;
+}
+#input_submit_product{
+    margin: -10px 10px 0px 10px;
+	width: 200px;
+	height: 50px;
+	border:1px solid white;
+	position: relative;
+	top:-240px;
+	right:-300px;
+	font-size:30px;
+	background:pink;
+}
+.name_phone_product{
+	width: 100%;
+	text-align:center;
+	height: 50px;
+}
+.box_login_web{
+	width: 50%;
+	height: 490px;
+	margin-bottom: 20px;
+	border: 3px solid black;
+	border-radius: 20px;
+	position: relative;
+	right:-320px;
+	font-family: 'Times New Roman', Times, serif;
+	padding: 10px;
+}
+.action{
+	text-align: center;
+	font-size: 40px;
+	color: blue;
+}
+.action_notification{
+	text-align: center;
+	font-size: 30px;
+	color: red;
+	margin-top: -15px;
+}
+.table_action_login{
+	position: relative;
+	bottom: 20px;
+	
+}
+.td_name{
+	width: 100px;
+	height:50px;
+	border: 0.5px solid white;
+	border-radius: 10px;
+	text-align: left;
+	font-size: 30px;
+	margin-right: 10px;
+}
+.td_action{
+	width: 470px;
+	height:50px;
+	border: 0.5px solid white;
+	border-radius: 10px;
+	text-align: left;
+}
+.input_action{
+	font-size: 30px;
+	width: 470px;
+	margin: 20px;
+}
+.box_space{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	background-color: #ff105f;
+}
+.input_action_button{
+	font-size: 30px;
+	width: 360px;
+	margin: 20px;
+	background-color: blue;
+	color: white;
+}
+.box_login_account{
+	width: 60%;
+	height: 700px;
+	margin-bottom: 20px;
+	border: 3px solid black;
+	border-radius: 20px;
+	position: relative;
+	right:-260px;
+	font-family: 'Times New Roman', Times, serif;
+	padding: 10px;
+}
+.td_name_information{
+	width: 200px;
+	height:50px;
+	border: 0.5px solid white;
+	border-radius: 10px;
+	text-align: left;
+	font-size: 30px;
+	margin-right: 10px;
+}
+.name_phone_product_items{
+	width: 100%;
+	text-align:center;
+	height: 50px;
+}

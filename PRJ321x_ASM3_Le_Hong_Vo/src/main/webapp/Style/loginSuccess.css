@@ -1,0 +1,79 @@
+@charset "ISO-8859-1";
+  .box_right{
+            border: 1px solid red;
+            width: 8%;
+            text-align: center;
+            background-color: rgb(162, 83, 241);
+            height:630px;
+        }
+        .box_top{
+            border: 1px solid red;  
+            width: 91.5%;
+            height:50px;
+            background-color: rgb(156, 100, 212);
+            text-align: center;
+            margin-left: 110px;
+            margin-top: -632px;
+        }
+        .box_middle{
+            border: 1px solid red;  
+            width: 91.5%;
+            height:200px;
+            margin-left: 110px; 
+        }
+        .box_bottom{
+            border: 1px solid red;  
+            width: 91.5%;
+            height:375px;
+            background-color: rgb(164, 116, 209);
+            margin-left: 110px; 
+            margin-top: 10px;
+        }
+        .box_img{
+            width: 100%;
+            height:200px;
+            
+        }
+        .text_tagh1{
+            color: orange;
+            font-size: 30px;
+        }
+        .text_tagA_staff{
+            width: 100%;
+            height: 40px;
+            font-size: 25px;
+            text-align: center;
+            border: 1px solid red;
+            background-color: pink;
+        }
+        .text_tagA_class{
+            width: 100%;
+            height: 40px;
+            font-size: 25px;
+            text-align: center;
+            margin-top: -20px;
+            border: 1px solid red;
+            background-color: pink;
+        }
+        th{
+            width: 201px;
+            height: 50px;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        td {
+            border: 1px solid black;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        .div_menber{
+            width: 100%;
+            height: 40px;
+            margin-top: -20px;      
+            text-align: center;
+            background-color: yellowgreen;
+        }
+        
+

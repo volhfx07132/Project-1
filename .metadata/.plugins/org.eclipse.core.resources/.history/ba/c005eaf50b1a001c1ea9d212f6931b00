@@ -1,0 +1,72 @@
+package com.java.levo;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.sql.DataSource;
+
+public class TrainProject extends HttpServlet {
+	private DataSource dataSource;
+
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+		try {
+			InitialContext initialContext = new InitialContext();
+			Context context = (Context) initialContext.lookup("java:comp/env");
+			dataSource = (DataSource) context.lookup("jdbc/shopingphone");
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        PrintWriter printWriter = resp.getWriter();
+		Connection connection = null;
+		printWriter.print("Connecting/n");
+        try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        
+        printWriter.print("Connected/n");
+        
+        Account account = new Account(connection);
+        try {
+			String valueString = account.showNamePhone();
+			printWriter.println(valueString);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+        
+        try {
+			connection.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        printWriter.print("Exits/n");
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+	}
+}

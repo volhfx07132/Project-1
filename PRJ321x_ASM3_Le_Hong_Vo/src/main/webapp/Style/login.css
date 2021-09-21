@@ -1,0 +1,65 @@
+@charset "ISO-8859-1";
+ body{
+               background-color: cadetblue;
+               font-family: 'Courier New', Courier, monospace;
+           }
+          .box_sign{
+              width: 49.6%;
+              height: 630px;
+              border: 1px solid red;
+              background-color: white;
+              text-align: center;
+              border-radius: 20px;
+              color: black;
+          }
+          .box_wellcome{
+              width: 49.6%;
+              height: 630px;
+              float: right;
+              border: 1px solid red;
+              border-radius: 20px;
+              margin-top: -632px;
+              background-color: blue;
+              text-align: center;
+              color: white;
+          }
+          .text_infor{
+              position: relative;
+              top:120px;
+              font-size: 70px;
+              font-weight: bold;
+          }
+          .text_detail{
+            position: relative;
+              top:120px;
+              font-size: 35px;
+              font-weight: bold;
+          }
+          .text_infor_signin{
+              position: relative;
+              top:40px;    
+              font-size: 70px;
+              font-weight: bold;
+          }
+          .input{
+              font-size: 40px;
+              margin-bottom: 40px;
+          }
+          .text_forgot_infor{
+              position: relative;
+              top: -50px;
+              font-weight: bold;
+              font-size: 35px;
+          }
+          .button_login{
+              width: 200px;
+              height: 55px;
+              background-color: orangered;
+              font-size: 30px;
+              border-radius: 20px;
+              position: relative;
+              top: -60px;
+          }
+          .text_notofication{
+           top: -30px;
+          }

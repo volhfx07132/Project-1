@@ -1,0 +1,147 @@
+package com.java.levo;
+
+
+public class User {
+	private int Id;
+	private String fullName ="";
+	private String idStudent ="";
+	private String className ="";
+    private String email ="";
+    private String password ="";
+    private String message ="";
+    
+    
+    
+    public User(int id, String fullName, String idStudent, String className, String email, String password) {
+		this.Id = id;
+		this.fullName = fullName;
+		this.idStudent = idStudent;
+		this.className = className;
+		this.email = email;
+		this.password = password;
+	}
+
+	public User(String fullName, String idStudent, String className, String email, String password) {
+		this.fullName = fullName;
+		this.idStudent = idStudent;
+		this.className = className;
+		this.email = email;
+		this.password = password;
+	}
+
+	public User(String email, String password) {
+		super();
+		this.email = email;
+		this.password = password;
+	}
+    
+    public User() {
+    	
+    }
+    
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}   
+	
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public String getIdStudent() {
+		return idStudent;
+	}
+
+	public void setIdStudent(String idStudent) {
+		this.idStudent = idStudent;
+	}
+
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
+	}
+	
+
+	public int getId() {
+		return Id;
+	}
+
+	public void setId(int id) {
+		Id = id;
+	}
+
+	public boolean validating() {
+		if (fullName.isEmpty()) {
+			message = "Full name can not empty";
+			return false;
+		}else {
+			if (idStudent.isEmpty()) {
+				message = "ID Student can not empty";
+				return false;
+			}else {
+				if (className.isEmpty()) {
+					message = "Class name can not empty";
+					return false;
+				}else {
+					if (email.isEmpty()) {
+						message = "Email can not empty";
+						return false;
+					}else {
+						if (password.isEmpty()) {
+							message = "Password can not empty";
+							return false;
+						}else {
+							if(password.matches("\\w*\\s+\\w*")) {
+								message = "Password can not contain space";
+								return false;
+							}else {
+								if (email.startsWith("@") || email.endsWith("@") || email.startsWith(".") || email.endsWith(".")) {
+									message = "Email not suitable with form email";
+									return false;
+								}else {
+									if (password.length() < 8) {
+										message = "Password must be great then 8 character";
+										return false;
+									}else {
+										message = "Ok , You Are in system";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return true;
+	}
+	
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return String.format("%-10d%-50s%-50s%-50s%-100s",Id ,fullName, idStudent, className, email);
+	}
+}

@@ -1,0 +1,30 @@
+package com.java.levo;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+
+public class Account {
+   private Connection connection;
+
+   public Account(Connection connection) {
+	  super();
+	  this.connection = connection;
+   }
+   
+   public String showDataBaseStudent() throws SQLException {
+	   String sql = "SELECT * FROM shopingphone.account;";
+	   PreparedStatement preparedStatement = connection.prepareStatement(sql);
+	   ResultSet rs = preparedStatement.executeQuery();
+	   String textString="";
+	   while (rs.next()) {
+		   
+		   textString += rs.getString(1).toString()+"\n";
+       }
+	   preparedStatement.close();
+	   return textString;
+   }
+}

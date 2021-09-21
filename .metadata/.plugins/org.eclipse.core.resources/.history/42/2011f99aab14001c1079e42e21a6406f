@@ -1,0 +1,67 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<!-- Hearder Hear -->
+<!-- Check account email ${name_account_login}-->
+
+<c:import url="header.jsp"></c:import>
+<div class="box_login">
+    <div style="height: 780px;" class="box_login_account">
+         <p class="action">Create a new Account</p>
+        
+         <form action="mainController" method="post">
+              <input class="input_action" type="hidden" name="action" value="doRegister">
+              <table>
+             <thead>
+                 <tr class="table_action_login">
+                     <td class="td_name_information">
+                         Email
+                     </td>
+                     <td class="td_action">
+                         <input class="input_action" type="email" name="email" value='<%=request.getAttribute("user_email") %>' placeholder="Email">
+                     </td>
+                 </tr>
+                 <tr class="table_action_login">
+                    <td class="td_name_information">
+                        Password
+                    </td>
+                    <td class="td_action">
+                        <input class="input_action" type="password" name="password" value='<%=request.getAttribute("password") %>' placeholder="Password">
+                    </td>
+                </tr>
+                <tr class="table_action_login">
+                    <td class="td_name_information">
+                        Account role
+                    </td>
+                    <td class="td_action">
+                        <input class="input_action" type="text" name="role" value="Buyer" placeholder="Role">
+                    </td>
+                </tr>
+                <tr class="table_action_login">
+                    <td class="td_name_information">
+                        Full name
+                    </td>
+                    <td class="td_action">
+                        <input class="input_action" type="text" name="fullName" value='<%=request.getAttribute("user_name") %>' placeholder="Full name">
+                    </td>
+                </tr>
+                <tr class="table_action_login">
+                    <td class="td_name_information">
+                        Address
+                    </td>
+                    <td class="td_action">
+                        <input class="input_action" type="text" name="address" value='<%=request.getAttribute("user_address") %>' placeholder="Address">
+                    </td>
+                </tr>
+               
+               
+                
+             </thead>
+         </table>         
+            <p class="action_notification"><%=request.getAttribute("message")%></p>   
+         </form>
+    </div>
+ </div>
+<!-- Body Hear -->
+	
+<!-- Footer Hear -->
+<c:import url="footer.jsp"></c:import>

@@ -1,0 +1,40 @@
+package com.java.levo;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+
+public class TrainProject extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PrintWriter printWriter = resp.getWriter();
+		Cookie[] cookies = req.getCookies();
+		if(cookies == null) {
+			printWriter.println("Cookis is empty");
+		}else {
+			for (Cookie cookie : cookies) {
+				String nameString = cookie.getName();
+				String valueString = cookie.getValue();
+				printWriter.println(nameString+" == "+valueString);
+			}
+		}
+		Cookie cookie = new Cookie("user", "lehongvo");
+		Cookie cookie1 = new Cookie("user", "tranvanA");
+		cookie.setMaxAge(300);
+		cookie1.setMaxAge(300);
+		resp.addCookie(cookie);
+		resp.addCookie(cookie1);
+ 	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		 
+	}
+}

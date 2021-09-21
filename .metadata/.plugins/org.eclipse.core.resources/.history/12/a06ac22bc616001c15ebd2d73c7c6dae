@@ -1,0 +1,50 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix = "form"%>
+<!-- Hearder Hear -->
+<!-- Check account email -->
+<c:if test="${email == null}">
+   <c:set var="email_name" value=""></c:set>
+</c:if>
+<c:if test="${email != null}">
+   <c:set var="email_name" value="${email}"></c:set>
+</c:if>
+<c:if test="${message == null}">
+   <c:set var="message_name" value="WelCome to my system"></c:set>
+</c:if>
+<c:if test="${message != null}">
+   <c:set var="message_name" value="${message}"></c:set>
+</c:if>
+<c:import url="header.jsp"></c:import>
+<!-- Body Hear -->
+	 <div class="box_login">
+        <div class="box_login_web">
+             <p class="action">Login to your account</p>
+             <form:form method = "POST" action = "/PRJ321x_ASM4_Le_Hong_Vo/addStudent" >
+         <table>
+            <tr class="table_action_login">
+               <td  class="td_name"><form:label path = "Email">Name</form:label></td>
+               <td class="td_action"><form:input path = "email" value="${name}"/></td>
+            </tr>
+            <tr class="table_action_login">
+               <td  class="td_name"><form:label path = "password">Age</form:label></td>
+               <td class="td_action"><form:input path = "password" value="${password}"/></td>
+            </tr>
+            <tr class="table_action_login">
+               <td  class="td_name"><form:label path = "repeat_password">id</form:label></td>
+               <td class="td_action"><form:input path = "repeat_password" value="${repeat_password}"/></td>
+            </tr>
+            <tr class="table_action_login">
+               <td class="td_action" colspan = "2">
+                  <input type = "submit" value = "Submit"/>
+               </td>
+            </tr>
+         </table>  
+         <h3>${message}</h3>
+      </form:form>
+        </div>
+     </div>
+<!-- Footer Hear -->
+<c:import url="footer.jsp"></c:import>

@@ -1,0 +1,14 @@
+package com.java.levo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloController {
+	 @RequestMapping(value = "/hello", method = RequestMethod.GET)
+     public String hello(ModelMap modelMap) {
+    	 modelMap.addAttribute("message", "Hello world, created by le hong vo");
+    	 return "hello";
+     }
+}

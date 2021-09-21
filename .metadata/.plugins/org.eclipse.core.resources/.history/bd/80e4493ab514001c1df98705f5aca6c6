@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style/login.css">
+</head>
+<body>
+         <div class="box_sign">
+            <p class="text_infor_signin">Sign In</p>
+            <form action="controller" method="post">
+                <input type="hidden" name="action" value="dologin"
+                
+                >
+                <input class="input" type="email" name="email">
+                <input class="input" type="password" name="password">
+                <p class="text_forgot_infor">Forgot Your Password</p>
+                <input class="button_login" type="submit" value="LOGIN">
+            </form>
+              <h2 class="text_notofication"><%=request.getAttribute("message") %></h2>
+         </div>
+
+         <div class="box_wellcome">
+             <p class="text_infor">Welcome Back</p>
+             <p class="text_detail">To keep connected with us please login with your personal infomation</p>
+   
+         </div>
+</body>
+</html>

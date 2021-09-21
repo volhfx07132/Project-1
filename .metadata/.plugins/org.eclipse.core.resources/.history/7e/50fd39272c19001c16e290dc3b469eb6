@@ -1,0 +1,49 @@
+package com.java.levo;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class EmailController extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PrintWriter out = resp.getWriter();
+
+		out.println("<html>");
+
+		Cookie[] cookies = req.getCookies();
+
+		if (cookies == null) {
+			out.println("No cookies found<br/>");
+		} else {
+			for (Cookie retrievedCookie : cookies) {
+				String name = retrievedCookie.getName();
+				String value = retrievedCookie.getValue();
+
+				out.println(name + " = " + value + "<br/>");
+			}
+		}
+
+		Cookie cookie = new Cookie("user", "Vicky");
+		
+		cookie.setMaxAge(300);
+
+		resp.addCookie(cookie);
+
+		out.println("Cookie set.<br/>");
+
+		out.println("</html>");
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+}

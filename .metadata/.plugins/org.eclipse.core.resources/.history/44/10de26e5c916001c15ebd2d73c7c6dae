@@ -1,0 +1,42 @@
+package com.java.levo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+
+@Controller
+public class StudentController {
+   @RequestMapping(value = "/", method = RequestMethod.GET)
+   public String login(Model model) {
+	    model.addAttribute("command", new Student()); 
+	    return "login";
+   }	    
+   @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
+      public String addStudent(@ModelAttribute("StudentLogin")Student student, 
+   
+   Model model) {
+	  if(student.getEmail().equals("") || student.getPassword().equals("") || student.getRepeat_password().isEmpty()) {
+		  model.addAttribute("message", "The text field can not empty!");
+		  model.addAttribute("email", student.getEmail());
+		  model.addAttribute("password", student.getPassword());
+		  model.addAttribute("repeat_password", student.getRepeat_password());
+		  model.addAttribute("command", new Student()); 
+		  return "login";
+	  }else {
+	      if(!student.getPassword().equals(student.getRepeat_password())) {
+	    	  model.addAttribute("message", "Password not mark");
+			  model.addAttribute("email", student.getEmail());
+			  model.addAttribute("password", "");
+			  model.addAttribute("repeat_password", student.getRepeat_password());
+			  model.addAttribute("command", new Student()); 
+	      }else {
+	    	  model.addAttribute("email", student.getEmail());
+		      return "result";
+	      }
+	  }     
+   }
+}
